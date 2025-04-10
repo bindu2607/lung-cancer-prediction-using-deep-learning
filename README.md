@@ -1,4 +1,4 @@
-# 🧠 Lung Cancer Risk Prediction Web App
+# 🫁 Lung Cancer Risk Prediction Web App
 
 A deep learning-powered web application that predicts lung cancer risk level (Low, Medium, High) based on 23 clinical, lifestyle, and environmental features provided by the user.
 
