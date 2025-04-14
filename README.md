@@ -1,43 +1,70 @@
-# 🫁 Lung Cancer Risk Prediction Web App
+🫁 Lung Cancer Risk Prediction Web App
+A deep learning-powered web application that predicts lung cancer risk levels — Low, Medium, or High — using 23 clinical, lifestyle, and environmental inputs from the user.
 
-A deep learning-powered web application that predicts lung cancer risk level (Low, Medium, High) based on 23 clinical, lifestyle, and environmental features provided by the user.
 
----
+🔍 Overview
+This project combines a trained MLP deep learning model (using Keras and TensorFlow) with a beautiful Flask web interface. Users enter personal and environmental details, and the app instantly predicts their lung cancer risk.
 
-## 🔍 Overview
+🎯 Features
+🌟 High-end UI with:
 
-This project integrates a trained deep learning model (using Keras and TensorFlow) with a Flask-based web interface to provide real-time lung cancer risk predictions. Users input their health and environmental data, and the model predicts the probability level of lung cancer risk.
+Glassmorphism design
 
----
+Dark/light mode toggle
 
-## 🖥️ Features
+Scroll & Lottie animations
 
-- ✅ High-end UI with **glassmorphism**, **dark/light mode toggle**, **Lottie animations**, **scroll animations**, and **responsive layout**
-- 🧠 Trained deep learning model using **Multilayer Perceptron (MLP)**
-- 🔥 Real-time predictions with Flask backend
-- 📊 Visualized accuracy and loss graphs
-- 🧪 Testing script for trying different input combinations
-- 📦 Saved scaler and trained model (`.h5`, `.pkl`)
+Responsive layout
 
----
+🧠 Deep Learning Model:
 
-## 🚀 How It Works
+Multilayer Perceptron (MLP)
 
-1. **User Inputs**:
-   - Age, Gender
-   - Air pollution, Alcohol use, Smoking, Genetic risk, etc.
-2. **Preprocessing**:
-   - Data scaled using `StandardScaler`
-3. **Prediction**:
-   - Model predicts risk level: Low / Medium / High
-4. **Output**:
-   - Result displayed on a beautifully styled results page
+Preprocessing with StandardScaler
 
----
+⚙️ Real-time Prediction using Flask
 
-## 📁 Project Structure
+📊 Training Visualization:
 
-```bash
+Accuracy & loss graphs
+
+🧪 Testing Mode:
+
+Script to test different inputs
+
+💾 Model Artifacts:
+
+Saved .h5 model and scaler.pkl
+
+🚀 How It Works
+📝 User Inputs
+
+Age, Gender, Air pollution, Smoking, Alcohol use, Genetic risk, etc.
+
+⚙️ Preprocessing
+
+Inputs are scaled using StandardScaler
+
+🧠 Prediction
+
+Model predicts: Low, Medium, or High risk
+
+🎨 Output
+
+Risk level shown on a beautifully styled results page
+
+🎨 Tech Stack
+Backend: Flask, Python
+
+Model: TensorFlow, Keras (MLP)
+
+Frontend: HTML5, CSS3, JavaScript
+
+Visual Effects: Lottie Animations, AOS (Animate on Scroll), Particles.js
+
+Styling: Bootstrap 5 (optional), Custom Glassmorphism
+
+🗂️ Project Structure
 lung-cancer-prediction-using-deep-learning/
 │
 ├── screenshots/                 # UI & result screenshots
@@ -47,48 +74,36 @@ lung-cancer-prediction-using-deep-learning/
 │   ├── home.JPG
 │   └── result.JPG
 │
-├── templates/                   # HTML templates for Flask
-│   ├── form.html
+├── templates/                   # Flask HTML templates
 │   ├── home.html
+│   ├── form.html
 │   └── results.html
 │
-├── cancer_patient_datasets.csv # Lung cancer dataset
-├── gui.py                       # Optional Tkinter GUI script
+├── cancer_patient_datasets.csv # Dataset
+├── gui.py                       # Optional Tkinter GUI
 ├── test.py                      # Test script with dummy inputs
-├── train.py                     # Model training script
-├── app.py                       # Flask web application
+├── train.py                     # Model training
+├── app.py                       # Flask backend
 │
-├── my_model.h5                  # Trained Keras model
-├── scaler.pkl                   # Saved StandardScaler
+├── my_model.h5                  # Trained model
+├── scaler.pkl                   # StandardScaler object
 │
-├── requirements.txt             # Python dependencies
+├── requirements.txt             # Dependencies
 ├── LICENSE                      # MIT License
-├── README.md                    # Project documentation
-├── package-lock.json            # Frontend dependencies (optional)
+├── README.md                    # This file
 
+⚙️ Installation & Running Locally
 
-## 📦 Installation & Running Locally
-
-```bash
 # Clone the repo
 git clone https://github.com/bindu2607/lung-cancer-prediction-using-deep-learning
 cd lung-cancer-prediction-using-deep-learning
 
-# (Optional) Create a virtual environment
+# (Optional) Create virtual environment
 python -m venv venv
-source venv/bin/activate  # or venv\Scripts\activate on Windows
+source venv/bin/activate  # On Windows: venv\Scripts\activate
 
-# Install required packages
+# Install dependencies
 pip install -r requirements.txt
 
-# Run the Flask app
+# Run the Flask web app
 python app.py
-
-## 🎨 UI Technologies Used
-
-Flask + Jinja2
-HTML5 / CSS3 / JavaScript
-Lottie Animations
-AOS (Animate On Scroll)
-Particles.js
-Bootstrap 5 (optional, if included)
